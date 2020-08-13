@@ -1,0 +1,22 @@
+USE sucos;
+
+ALTER TABLE tbcliente ADD PRIMARY KEY (CPF);
+
+ALTER TABLE tbcliente ADD COLUMN (DATA_NASCIMENTO DATE);
+
+INSERT INTO tbcliente (
+CPF, NOME, ENDERECO01, ENDERECO02, BAIRRO, CIDADE,
+ESTADO, CEP, IDADE, SEXO, LIMITE_CREDITO, VOLUME_COMPRA,
+PRIMEIRA_COMPRA, DATA_NASCIMENTO)
+VALUES ('12345678', 'Rajadão Mostarda', 'Rua dos Asfaltos casa 10 esquina',
+'', 'Mais pro Sul', 'Ponta Quebrada', 'EW', '78888555', 29, 'M', 10000.00, 2000, 0, '1991-04-14');
+
+SELECT * FROM tbcliente;
+
+
+
+/*TESTE
+ALTER TABLE tabela_de_vendedores ADD COLUMN(
+DATA_ADMISSAO DATE, 
+DE_FERIAS BIT); */ 
+
